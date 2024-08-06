@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class=" flex justify-center items-center h-screen ">
+        <div id="calculator" class=" w-full md:w-1/2 px-2 py-6  rounded-3xl border-4 border-gray-100  bg-gray-900 shadow-sm ">
+            <input id="display" readonly class="w-full h-48 bg-transparent text-6xl text-white outline-none mb-4 text-right  px-4 lg:px-10 2xl:px-16 ">
+
+            <div id="keys" class="grid grid-cols-4 place-items-center gap-2 p-2 ">
+                <button id="btn-pink" class=" bg-pink-200 text-3xl rounded-full font-bold w-16 h-16 shadow-inner   " onclick="clearDisplay()">AC</button>
+                <button id="btn-pink" class=" bg-pink-200 text-3xl rounded-full font-bold w-16 h-16 " onclick="del()"><i class="fa-solid fa-delete-left fa-sm" style="color: #000;"></i></button>
+                <button id="btn-pink" class=" bg-pink-200 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('%')">%</button>
+                <button id="btn-pink" class=" bg-pink-200 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('/')">/</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 shadow-inner" onclick="appendToDisplay('7')">7</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('8')">8</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('9')">9</button>
+                <button id="btn-pink" class=" bg-pink-200 text-4xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('*')">*</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('4')">4</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('5')">5</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('6')">6</button>
+                <button id="btn-pink" class=" bg-pink-200 text-4xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('-')">-</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('1')">1</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('2')">2</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('3')">3</button>
+                <button id="btn-pink" class=" bg-pink-200 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('+')">+</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('00')">00</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('0')">0</button>
+                <button id="btn-gray" class=" bg-gray-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="appendToDisplay('.')">.</button>
+                <button id="btn-green" type="submit" class=" bg-green-300 text-3xl  rounded-full font-bold w-16 h-16 " onclick="calculate()">=</button>
+            </div>
+        </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
